@@ -14,7 +14,7 @@ var Employee = mongoose.model('Employee', {
     office: {
         type: String,
         default: null,
-        lowercase: true
+        trim: true
     },
     salary: {
         type: Number,

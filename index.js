@@ -5,13 +5,15 @@ const cors = require('cors');
 
 
 // local imports
+const { mongoose } = require('./db.js');
 var employeeController = require('./controllers/employeeController');
 
 // middlewares
 var app = express();
 app.use(bodyParser.json());
-app.use('/employees', employeeController);
 app.use(cors({ origin: 'http://localhost:4200' }));
+app.use('/employees', employeeController);
+
 
 
 // server listen
